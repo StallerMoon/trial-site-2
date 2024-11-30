@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef9f5;
+            color: #333;
+        }
+        header {
+            background-color: #ffe4c4;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #8b4513;
+            font-size: 2.5em;
+        }
+        .cart-container {
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .cart-item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .cart-item-details h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+        .cart-item-details p {
+            margin: 0;
+            color: #777;
+        }
+        .cart-item-price {
+            margin-right: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .cart-item button {
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .cart-item button:hover {
+            background-color: #a0522d;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #8b4513;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+        <nav>
+            <a href="пробный.html">Главная</a> | 
+            <a href="пробныйjv.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="корзина.html">Корзина</a>
+        </nav>
+    </header>
+    <header>
+        <h1>Ваша корзина</h1>
+    </header>
+    <div class="cart-container" id="cart-container">
+        <!-- Товары будут добавляться динамически -->
+    </div>
+    <footer>
+        ©️ 2024 Корейские БАДы. Все права защищены.
+    </footer>
+    <script>
+        // Получаем данные из локального хранилища
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartContainer = document.getElementById('cart-container');
+
+        if (cartItems.length === 0) {
+            cartContainer.innerHTML = '<p>Корзина пуста.</p>';
+        } else {
+            cartItems.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                    <div class="cart-item-price">${item.price} ₽</div>
+                    <button onclick="removeFromCart('${item.name}')">Удалить</button>
+                `;
+                cartContainer.appendChild(cartItem);
+            });
+        }
+
+        function removeFromCart(name) {
+            // Удаляем товар из массива
+            const updatedCart = cartItems.filter(item => item.name !== name);
+            localStorage.setItem('cart', JSON.stringify(updatedCart));
+            alert(${name} удален из корзины);
+            location.reload(); // Обновляем страницу
+        }
+    </script>
+</body>
+</html>

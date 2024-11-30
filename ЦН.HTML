@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #7e57c2;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .content {
+            width: 80%;
+            padding: 20px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .product p {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Каталог товаров</h1>
+        <nav>
+            <a href="пробный.html">Главная</a>
+            <a href="пробныйjv.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="корзина.html">Корзина</a>
+            <a href="ЦН.HTML">Каталог</a>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li>Коллагены</li>
+                <li>Пробиотики</li>
+                <li>Женьшень</li>
+                <li>Для детей</li>
+                <li>Для взрослых</li>
+                <li>Новинки</li>
+                <li>Популярные</li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск...">
+                <button>Найти</button>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <img src="https://via.placeholder.com/200" alt="Товар 1">
+                    <h3>Экстракт красного женьшеня</h3>
+                    <p>Набор, 4 банки</p>
+                    <p>Цена: 1500 руб.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/200" alt="Товар 2">
+                    <h3>Truemom железо</h3>
+                    <p>90 стиков</p>
+                    <p>Цена: 1200 руб.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/200" alt="Товар 3">
+                    <h3>Охлаждающие пластыри</h3>
+                    <p>2 упаковки</p>
+                    <p>Цена: 500 руб.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

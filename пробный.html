@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корейские БАДы</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1D0D6;
+            color: #333;
+        }
+        header {
+            background-color: #F8F1E5;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #baaad9;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #816da9;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .product {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #777;
+            padding: 0 10px;
+        }
+        .product button {
+            background-color: #F1D0D6;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 0 0 8px 8px;
+        }
+        .product button:hover {
+            background-color: #F1D0D6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #F1D0D6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Корейские БАДы</h1>
+        <nav>
+          <a href="пробный.html">Главная</a>
+          <a href="пробныйjv.html">О нас</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="корзина.html">Корзина</a>
+          <a href="ЦН.HTML">Каталог</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Популярные продукты</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="путь_к_изображению4.jpg" alt="Продукт 1">
+                <h3>Экстракт красного женьшеня набор</h3>
+                <p>Польза:
+                Замедляет старение, улучшает память, состояние кожи и кровообращение. Восстанавливает силы, нормализует давление, поддерживает сердце, печень и общий тонус организма.
+                
+                Применение:
+                1–2 раза в день по 2 ложки, растворить в воде.
+                
+                Упаковка:
+                4×250 г (всего 1000 г).
+                
+                Важно:
+                Беременным и кормящим — только после консультации с врачом.О нем оставляют исключительно положительные отзывы.</p>
+                <button onclick="addToCart('Продукт 1')">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="путь_к_изображению2.jpg" alt="Продукт 2">
+                <h3>Lactofit baby для малышей </h3>
+                <p>ППробиотики рекомендуются при:
+                  при нерегулярном стуле, кишечных инфекциях, вздутии и метеоризме, дисбактериозе, восстановлении после курса антибиотиков.
+                  Пробиотики способствуют нормализации микрофлоры кишечника, улучшению пищеварения, поддержанию иммунной системы и общему улучшению здоровья организма, повышая его сопротивляемость различным заболеваниям и улучшая усвоение питательных веществ </p>
+                <button onclick="addToCart('Продукт 2')">Добавить в корзину</button>
+            </div>
+            <div class="product">
+              <img src="путь_к_изображению3.jpg" alt="Продукт 1">
+              <h3>Женьшень для взрослых 100 стиков</h3>
+              <p>Польза:
+                Борется с усталостью, стрессом и повышает уровень энергии. Укрепляет мышцы, иммунитет, лёгкие и желудок. Улучшает кровообращение, способствует выведению токсинов из организма. Содержит витамины, аминокислоты, минералы, необходимые для нормального функционирования организма.
+                Состав:
+                Женьшень 15%, сахар 10%, экстракты трав и грибов.
+                Применение:
+                1 стик в день, запивать водой.</p>
+              <button onclick="addToCart('Продукт 3')">Добавить в корзину</button>
+          </div>
+          <div class="product">
+            <img src="путь_к_изображению1.jpg" alt="Продукт 1">
+            <h3>Ildong Truemom железо с фолиевой кислотой, 90 стиков</h3>
+            <p>Преимущества: подходит детям с 3-недельного возраста. Удобный формат: можно смешивать с молоком или смесью. Состав (в 1 г): железо 6 мг, фолиевая кислота, витамины B6, B12, C, D, фрукто- и галактоолигосахариды. Упаковка: 90 стиков по 1 г. Применение: 1–2 стика в день. Беременным и кормящим женщинам необходимо проконсультироваться с врачом. </p>
+            <button onclick="addToCart('Продукт 4')">Добавить в корзину</button>
+        </div>
+        <div class="product">
+          <img src="путь_к_изображению5.jpg" alt="Продукт 1">
+          <h3>Natural plus витамин д 2000 , 60 таблеток</h3>
+          <p>Natural Plus Organic Premium Витамин D 2000 МЕ, 60 таблеток, содержит витамин D3 американского производства для поддержания здоровья костей, зубов и иммунной системы. В состав входят 17 органических веществ, включая витамины, минералы и растительные экстракты. Способ применения: по 1 таблетке в день.</p>
+          <button onclick="addToCart('Продукт 5')">Добавить в корзину</button>
+      </div>
+      <div class="product">
+        <img src="путь_к_изображению6.jpg" alt="Продукт 1">
+        <h3>Корейский лечебный дезодорант</h3>
+        <p>Эффективен против потоотделения и неприятного запаха.Быстро сохнет, не оставляет липкости.Обладает антисептическими и антибактериальными свойство. Наносить на сухую кожу перед сном, не сбривать волосы за два дня до применения.Использовать дважды в неделю.
+          Объем: 30 мл. </p>
+        <button onclick="addToCart('Продукт 6')">Добавить в корзину</button>
+    </div>
+    <div class="product">
+      <img src="путь_к_изображению7.jpg" alt="Продукт 1">
+      <h3>Nutri Garden vitamin d 2000 IU, витамин Д для детей(витамин Ц, цинк)</h3>
+      <p>Витамин D для детей Nutri Garden 2000 МЕ поддерживает здоровье костей, зубов и иммунной системы. Содержит витамин С и цинк, изготовлен из премиальных сертифицированных ингредиентов Quall. Жевательные мишки со вкусом апельсина, которые дети едят с удовольствием, способствуют укреплению организма.</p>
+      <button onclick="addToCart('Продукт 7')">Добавить в корзину</button>
+  </div>
+  <div class="product">
+    <img src="путь_к_изображению8.jpg" alt="Продукт 1">
+    <h3>Жаропонижающие пластыри для детей от 0-3лет, 2 упаковки</h3>
+    <p>
+      Жаропонижающие пластыри для детей от 0 до 3 лет. Обеспечивают комфортное охлаждение до 10 часов, безопасны для младенцев. В упаковке 6 пластырей размером 4×9 см. Одноразовые, удобны в использовании. Хранить в прохладном месте, можно в холодильнике, но не в морозильной камере. </p>
+    <button onclick="addToCart('Продукт 8')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению9.jpg" alt="Продукт 1">
+  <h3>Продукт 9</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 9')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению10.jpg" alt="Продукт 1">
+  <h3>Продукт 10</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 10')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению11.jpg" alt="Продукт 1">
+  <h3>Продукт 11</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 11')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению12.jpg" alt="Продукт 1">
+  <h3>Продукт 12</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 12')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению13.jpg" alt="Продукт 1">
+  <h3>Продукт 13</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 13')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению14.jpg" alt="Продукт 1">
+  <h3>Продукт 14</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 14')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению15.jpg" alt="Продукт 1">
+  <h3>Продукт 15</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 15')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению16.jpg" alt="Продукт 1">
+  <h3>Продукт 16</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 16')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению17.jpg" alt="Продукт 1">
+  <h3>Продукт 17</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 17')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению18.jpg" alt="Продукт 1">
+  <h3>Продукт 18</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 18')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению19.jpg" alt="Продукт 1">
+  <h3>Продукт 19</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 19')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению20.jpg" alt="Продукт 1">
+  <h3>Продукт 20</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 20')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению21.jpg" alt="Продукт 1">
+  <h3>Продукт 21</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 21')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению22.jpg" alt="Продукт 1">
+  <h3>Продукт 22</h3>
+  <p>Описание продукта</p>
+  <button onclick="addToCart('Продукт 22')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению23.jpg" alt="Продукт 1">
+  <h3>Продукт 23</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 23')">Добавить в корзину</button>
+</div>
+<div class="product">
+  <img src="путь_к_изображению24.jpg" alt="Продукт 1">
+  <h3>Продукт 24</h3>
+  <p>Описание продукта </p>
+  <button onclick="addToCart('Продукт 24')">Добавить в корзину</button>
+</div>
+        </div>
+    </main>
+    <footer>
+        © 2024 Корейские БАДы. Все права защищены.
+    </footer>
+    <div class="cart" id="cart">
+        <h3>Корзина</h3>
+        <ul id="cart-items"></ul>
+    </div>
+</body>
+</html>
